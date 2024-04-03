@@ -26,7 +26,7 @@ import { FormsModule } from '@angular/forms';
       domain: 'dev-01zd21ssgzmznj46.us.auth0.com',
       clientId: 'Mp17Q0T5LtePQwL3yo2HiUd5vTYOHQhz',
       authorizationParams: {
-        redirect_uri: window.location.origin
+        redirect_uri: 'https://altaircgs.github.io/GestionConfigApp/'
       }
     }),
   ],
