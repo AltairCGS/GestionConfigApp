@@ -1,0 +1,26 @@
+.card-input {
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    flex: 1;
+    margin-right: 1rem;
+    
+}
+
+button {
+    padding: 5px 10px;
+    border: 1px solid rgb(255, 255, 255);
+    background: none;
+    height: fit-content;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}

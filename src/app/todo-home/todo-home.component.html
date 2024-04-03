@@ -1,0 +1,33 @@
+<header class="p-3">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" *ngIf="auth.user$ | async as user">
+  
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-between mb-md-0">
+          <li><a class="nav-link px-2 link-body-emphasis">Gestión de la configuración | {{ user.name }}</a></li>
+        </ul>
+  
+        <div class="dropdown text-end" *ngIf="auth.user$ | async as user">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
+            <img src="{{ user.picture }}" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 34px, 0px);" data-popper-placement="bottom-start">
+            <li><button class="dropdown-item" (click)="LogOut()">Cerrar sesión</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="Start">
+    
+    <h1>ToDo App</h1>
+    <div class="tasks-input">
+      <app-input (onAgregar)="agregarTask($event)"></app-input>
+    </div>
+    <div class="tasks-list">
+      <app-task
+        *ngFor="let task of tasksList; let i = index"
+        [texto]="task"
+        (onEliminar)="eliminarTask(i)"
+      ></app-task>
+    </div>
+</div>
