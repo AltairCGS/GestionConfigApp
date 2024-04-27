@@ -22,7 +22,7 @@
     <div class="tasks-input">
         <app-input (onAgregar)="agregarTask($event)"></app-input>
         <div class="search-input">
-          <input type="text" [(ngModel)]="searchKeyword" placeholder="Buscar tarea">
+          <input type="text" [(ngModel)]="searchKeyword" placeholder="Buscar palabra">
           <button (click)="buscarYContar()">Buscar</button>
       </div>
       <div class="search-result" *ngIf="searchResult !== null">
