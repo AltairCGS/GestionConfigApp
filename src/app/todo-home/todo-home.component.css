@@ -27,3 +27,23 @@ button {
     margin-top: 5%;
 
 }
+
+.search-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.tasks-input{
+    text-align: center;
+}
+button {
+    padding: 5px 10px;
+    border: 1px solid rgb(255, 255, 255);
+    background: none;
+    height: fit-content;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+}

@@ -23,4 +23,5 @@ button {
     color: black;
     cursor: pointer;
     color: rgb(255, 255, 255);
+    margin-top: 1rem;
 }

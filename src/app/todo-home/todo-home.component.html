@@ -17,17 +17,23 @@
       </div>
     </div>
   </header>
-<div class="Start">
-    
+  <div class="Start">
     <h1>ToDo App</h1>
     <div class="tasks-input">
-      <app-input (onAgregar)="agregarTask($event)"></app-input>
+        <app-input (onAgregar)="agregarTask($event)"></app-input>
+        <div class="search-input">
+          <input type="text" [(ngModel)]="searchKeyword" placeholder="Buscar tarea">
+          <button (click)="buscarYContar()">Buscar</button>
+      </div>
+      <div class="search-result" *ngIf="searchResult !== null">
+        <p>La palabra "{{ searchKeyword }}" se repite {{ searchResult }} veces.</p>
+    </div>
     </div>
     <div class="tasks-list">
-      <app-task
-        *ngFor="let task of tasksList; let i = index"
-        [texto]="task"
-        (onEliminar)="eliminarTask(i)"
-      ></app-task>
+        <app-task
+            *ngFor="let task of tasksList; let i = index"
+            [texto]="task"
+            (onEliminar)="eliminarTask(i)"
+        ></app-task>
     </div>
 </div>
